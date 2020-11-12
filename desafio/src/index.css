@@ -1,0 +1,88 @@
+link{
+  text-decoration: none;
+}
+body {
+  background-image: url("./fundo_index.jpg");
+  color: #ffff;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+}
+.container {
+  margin: 1cm;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  overflow: hidden;
+  position: relative;
+}
+.header {
+  margin: 0 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+  margin-top: 0.2rem;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+#buttons {
+  background-color: #1c1c1c;
+  color: #ffff;
+}
+.footer {
+  background: rgba(255, 255, 255, 0.15);
+  min-height: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.055rem;
+  line-height: 1.2rem;
+  padding: 0.4rem 0;
+  border-radius: 8px;
+}
+.footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  
+}
+.plant {
+  padding: 0 0.125em;
+  color: #0da321;
+}
+a {
+  opacity:0.5;
+}
+a:hover {
+  opacity: 2;
+  transition-duration: 1.5s;
+}
+img{
+  margin-right: 750px;
+  border-radius: 8px;
+}
+label{
+  text-align: right;
+  font-size: 15px;
+}
+select{
+  background-color: rgba(58, 57, 56, 0.568);
+  color: rgb(160, 160, 160);
+  border-radius: 6px;
+}
+option{
+  color: rgba(15, 15, 15, 0.568);
+  background-color:rgb(160, 160, 160);
+  cursor: pointer;
+}
+.usina{
+  margin-top: 0.5cm;
+  text-align:left;
+}
+.clientes{
+  margin-top: 0.5cm;
+  text-align:right;
+}
