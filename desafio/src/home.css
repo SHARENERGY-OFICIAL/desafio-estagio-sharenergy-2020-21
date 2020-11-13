@@ -1,4 +1,4 @@
-link{
+link {
   text-decoration: none;
 }
 body {
@@ -30,10 +30,6 @@ h1 {
   letter-spacing: 0.01em;
   text-align: left;
 }
-#buttons {
-  background-color: #1c1c1c;
-  color: #ffff;
-}
 .footer {
   background: rgba(255, 255, 255, 0.15);
   min-height: 2rem;
@@ -47,42 +43,74 @@ h1 {
 .footer a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
-  
 }
 .plant {
   padding: 0 0.125em;
   color: #0da321;
 }
 a {
-  opacity:0.5;
+  opacity: 0.38;
 }
 a:hover {
-  opacity: 2;
+  opacity: 0.8;
   transition-duration: 1.5s;
 }
-img{
-  margin-right: 750px;
-  border-radius: 8px;
-}
-label{
-  text-align: right;
+label {
+  margin-left: 800px;
   font-size: 15px;
 }
-select{
+select {
   background-color: rgba(58, 57, 56, 0.568);
   color: rgb(160, 160, 160);
   border-radius: 6px;
 }
-option{
+option {
   color: rgba(15, 15, 15, 0.568);
-  background-color:rgb(160, 160, 160);
+  background-color: rgb(160, 160, 160);
   cursor: pointer;
 }
-.usina{
+.usina {
   margin-top: 0.5cm;
-  text-align:left;
+  float: left;
+  border-radius: 8px;
 }
-.clientes{
+#usina_img {
+  width: 500px;
+  height: 350px;
+  margin-left: 1cm;
   margin-top: 0.5cm;
-  text-align:right;
+  border-radius: 16px;
+  float: left;
+} 
+#usina_img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition-delay: 0.05s;
+}
+.usina a{
+  float: left;
+}
+.clientes {
+  margin-top: 0.5cm;
+  float: right;
+  border-radius: 8px;
+}
+#clientes_img {
+  width: 500px;
+  height: 350px;
+  margin-right: 1cm;
+  margin-top: 0.5cm;
+  border-radius: 16px;
+  float: right;
+}
+#clientes_img:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition-delay: 0.05s;
 }
