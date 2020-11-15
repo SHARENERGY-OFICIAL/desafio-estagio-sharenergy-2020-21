@@ -9,24 +9,40 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
+import GroupIcon from "@material-ui/icons/Group";
+import Tooltip from "@material-ui/core/Tooltip";
 import { VictoryLine, VictoryChart, VictoryTheme } from "victory";
+
+import { useHistory } from "react-router-dom";
 
 import dadosUsina from "../../data/dadosUsina.json";
 
-import { PageContainer } from "./styles";
+import { PageContainer, ButtonText } from "./styles";
 
 const Dashboard: React.FC = () => {
   const [selectedInterest, setSelectedInterest] = useState("tensao_V");
+  const history = useHistory();
 
   return (
     <PageContainer>
-      <AppBar className="Header" color="primary">
+      <AppBar color="primary">
         <Toolbar>
           <img
             src="https://sharenergy.com.br/wp-content/uploads/2018/08/logo-Sharenergy-01.png"
             alt="SHARENERGY"
             className="HeaderLogo"
           />
+          <Tooltip title="Ir para Clientes" aria-label="ir para clientes">
+            <Button
+              onClick={() => history.push("clientes")}
+              color="inherit"
+              aria-label="clientes"
+            >
+              <ButtonText>Clientes</ButtonText>
+              <GroupIcon />
+            </Button>
+          </Tooltip>
         </Toolbar>
       </AppBar>
       <Typography className="Title" variant="h4">

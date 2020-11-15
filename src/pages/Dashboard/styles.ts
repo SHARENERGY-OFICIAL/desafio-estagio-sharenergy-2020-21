@@ -5,9 +5,12 @@ export const PageContainer = styled.div`
     background-color: #222;
   }
 
+  .MuiToolbar-gutters {
+    justify-content: space-between;
+  }
+
   .HeaderLogo {
     height: 50px;
-    margin-right: 40px;
   }
 
   .Title {
@@ -75,15 +78,9 @@ export const PageContainer = styled.div`
     .Title {
       font-size: 28px;
     }
-
-    .Header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .HeaderLogo {
-      margin-right: 0;
-    }
   }
+`;
+
+export const ButtonText = styled.p`
+  margin-right: 6px;
 `;

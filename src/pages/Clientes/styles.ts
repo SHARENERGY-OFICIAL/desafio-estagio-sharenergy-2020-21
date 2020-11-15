@@ -1,0 +1,242 @@
+import styled from "styled-components";
+
+export const PageContainer = styled.div`
+  .MuiAppBar-colorPrimary {
+    background-color: #222;
+  }
+
+  .MuiToolbar-gutters {
+    justify-content: space-between;
+  }
+
+  .HeaderLogo {
+    height: 50px;
+  }
+
+  .Container {
+    display: flex;
+    max-width: 1000px;
+    height: 530px;
+
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #222;
+
+    .MuiDivider-root {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  .SideBar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .MuiListItem-button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .ClientItem {
+    padding-right: 20px;
+    color: #eee;
+    min-width: 200px;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+
+    .MuiListItemIcon-root {
+      min-width: 35px;
+    }
+  }
+
+  .ClientItemSelected {
+    padding-right: 20px;
+    color: #eee;
+    min-width: 200px;
+
+    border-bottom: 2px solid rgba(0, 162, 162, 1);
+    border-top: 2px solid transparent;
+
+    .MuiListItemIcon-root {
+      min-width: 35px;
+    }
+  }
+
+  .SelectionPlaceholder {
+    color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MainBox {
+    display: flex;
+    flex: 1;
+    align-items: initial;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+
+    .NameContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-bottom: 50px;
+    }
+
+    .TopBarContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .InputLabel {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-right: calc(50% - 105px);
+      margin-left: auto;
+    }
+
+    .SaveButton {
+      background-color: rgba(0, 162, 162, 1);
+    }
+
+    .Input {
+      margin-top: 10px;
+      background-color: transparent;
+      border-radius: 5px;
+      border: 0;
+      border-bottom: solid 2px transparent;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: #eee;
+      font-weight: bold;
+      font-size: 28px;
+      text-align: center;
+      transition: background-color 0.25s;
+      background-color: rgb(42, 42, 42);
+    }
+
+    .Input:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .Input:focus {
+      border-bottom: solid 2px rgba(0, 162, 162, 1);
+      background-color: rgba(0, 162, 162, 0.05);
+    }
+
+    .CompanysLable {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .CompanyList {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .CompanyCard {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(42, 42, 42);
+    margin-top: 15px;
+    color: #eee;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .PercentageText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .CompanyPercentage {
+    color: #eee;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 2px transparent;
+    border-top: solid 2px transparent;
+    border-radius: 5px;
+    width: 36px;
+    transition: background-color 0.25s;
+  }
+
+  .CompanyPercentage:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .CompanyPercentage:focus {
+    border-bottom: solid 2px rgba(0, 162, 162, 1);
+    background-color: rgba(0, 162, 162, 0.05);
+  }
+
+  .CircularPercentage {
+    color: rgba(0, 162, 162, 1);
+  }
+
+  .PercentageContainer {
+    margin-bottom: 8px;
+  }
+
+  .Profit {
+    font-size: 20px;
+  }
+`;
+
+export const ButtonText = styled.p`
+  margin-left: 6px;
+`;
