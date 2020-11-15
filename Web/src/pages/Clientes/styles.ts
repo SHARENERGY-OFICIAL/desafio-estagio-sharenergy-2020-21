@@ -41,7 +41,7 @@ export const PageContainer = styled.div`
 
     @media only screen and (max-width: 530px) {
       height: calc(100vh - 50px);
-      margin-top: 50px;
+      margin-top: 56px;
     }
   }
 
@@ -132,7 +132,7 @@ export const PageContainer = styled.div`
       }
 
       .SelectionPlaceholderText {
-        margin-bottom: 48px;
+        margin-bottom: 104px;
       }
     }
   }
@@ -169,6 +169,16 @@ export const PageContainer = styled.div`
       }
     }
 
+    .SaveButton {
+      background-color: rgba(0, 162, 162, 1);
+
+      @media only screen and (max-width: 530px) {
+        width: 60px;
+        height: 30px;
+        font-size: 14px;
+      }
+    }
+
     .TopBarContainer {
       width: 100%;
       display: flex;
@@ -181,10 +191,10 @@ export const PageContainer = styled.div`
       color: rgba(255, 255, 255, 0.5);
       margin-right: calc(50% - 105px);
       margin-left: auto;
-    }
 
-    .SaveButton {
-      background-color: rgba(0, 162, 162, 1);
+      @media only screen and (max-width: 530px) {
+        margin-right: calc(50% - 84px);
+      }
     }
 
     .Input {
