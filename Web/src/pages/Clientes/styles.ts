@@ -15,8 +15,8 @@ export const PageContainer = styled.div`
 
   .Container {
     display: flex;
-    max-width: 1000px;
-    height: 530px;
+    max-width: 1100px;
+    height: 750px;
 
     margin-top: 90px;
     margin-left: auto;
@@ -26,12 +26,33 @@ export const PageContainer = styled.div`
     .MuiDivider-root {
       background-color: rgba(255, 255, 255, 0.05);
     }
+
+    @media only screen and (max-height: 870px) {
+      height: 650px;
+    }
+
+    @media only screen and (max-height: 760px) {
+      height: 530px;
+    }
+
+    @media only screen and (max-height: 650px) {
+      height: 500px;
+    }
+
+    @media only screen and (max-width: 530px) {
+      height: calc(100vh - 90px);
+    }
   }
 
   .SideBar {
     overflow-y: auto;
     overflow-x: hidden;
     max-width: 250px;
+
+    @media only screen and (max-width: 725px) {
+      display: none;
+    }
+
     ::-webkit-scrollbar {
       width: 5px;
     }
@@ -80,8 +101,38 @@ export const PageContainer = styled.div`
     color: rgba(255, 255, 255, 0.1);
     display: flex;
     flex: 1;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+
+    .MenuButtonOnPlaceholder {
+      margin-top: 20px;
+      margin-left: 20px;
+      width: 48px;
+      height: 48px;
+      display: none;
+    }
+
+    .SelectionPlaceholderText {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: 530px) {
+      .MuiTypography-h3 {
+        font-size: 30px;
+      }
+    }
+
+    @media only screen and (max-width: 725px) {
+      .MenuButtonOnPlaceholder {
+        display: inline-flex;
+      }
+
+      .SelectionPlaceholderText {
+        margin-bottom: 48px;
+      }
+    }
   }
 
   .MainBox {
@@ -92,6 +143,12 @@ export const PageContainer = styled.div`
     flex-direction: column;
     padding: 20px;
 
+    @media only screen and (max-width: 410px) {
+      .Input {
+        width: 250px;
+      }
+    }
+
     .NameContainer {
       display: flex;
       flex-direction: column;
@@ -99,6 +156,15 @@ export const PageContainer = styled.div`
       justify-content: center;
       width: 100%;
       padding-bottom: 50px;
+    }
+
+    .MenuButton {
+      color: #eee;
+      display: none;
+
+      @media only screen and (max-width: 725px) {
+        display: inline-flex;
+      }
     }
 
     .TopBarContainer {
@@ -152,10 +218,16 @@ export const PageContainer = styled.div`
     }
   }
 
-  .CompanyList {
+  .CompanyListContainer {
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .MuiGridListTile-root {
+      height: 180px !important;
+    }
 
     ::-webkit-scrollbar {
       width: 6px;
@@ -213,11 +285,12 @@ export const PageContainer = styled.div`
     border-top: solid 2px transparent;
     border-radius: 5px;
     width: 36px;
+    background-color: rgba(255, 255, 255, 0.05);
     transition: background-color 0.25s;
   }
 
   .CompanyPercentage:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   .CompanyPercentage:focus {

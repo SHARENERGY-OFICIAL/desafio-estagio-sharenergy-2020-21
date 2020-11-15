@@ -16,26 +16,36 @@ import { VictoryLine, VictoryChart, VictoryTheme } from "victory";
 
 import { useHistory } from "react-router-dom";
 
-import dadosUsina from "../../data/dadosUsina.json";
+import api from "../../services/api";
+
+import IDadoUsina from "../../interfaces/IDadoUsina";
 
 import { PageContainer, ButtonText } from "./styles";
 
 const Dashboard: React.FC = () => {
   const [selectedInterest, setSelectedInterest] = useState("tensao_V");
   const [producedEnergyPrice, setProducedEnergyPrice] = useState<number>(0);
+  const [dadosUsina, setDadosUsina] = useState<IDadoUsina[]>([]);
 
   const history = useHistory();
 
   useEffect(() => {
-    const timeInterval = dadosUsina[1].tempo_h - dadosUsina[0].tempo_h;
-    var kWTotal = 0;
-    dadosUsina.forEach((dado) => {
-      kWTotal += dado.potencia_kW;
-    });
+    async function loadData() {
+      const response = await api.get<IDadoUsina[]>("/usina");
 
-    const totalEnergy = timeInterval * kWTotal;
+      setDadosUsina(response.data);
 
-    setProducedEnergyPrice(totalEnergy * 0.95);
+      const timeInterval = response.data[1].tempo_h - response.data[0].tempo_h;
+      var kWTotal = 0;
+      response.data.forEach((dado: IDadoUsina) => {
+        kWTotal += dado.potencia_kW;
+      });
+
+      const totalEnergy = timeInterval * kWTotal;
+
+      setProducedEnergyPrice(totalEnergy * 0.95);
+    }
+    loadData();
   }, []);
 
   return (

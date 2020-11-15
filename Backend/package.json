@@ -6,10 +6,11 @@
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev --inspect --transpile-only --ignore node_modules src/server.ts",
-    "test": "jest"
+    "populate": "ts-node src/database/populate.ts",
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.14"
   },
