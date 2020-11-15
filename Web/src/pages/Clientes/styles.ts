@@ -40,7 +40,8 @@ export const PageContainer = styled.div`
     }
 
     @media only screen and (max-width: 530px) {
-      height: calc(100vh - 90px);
+      height: calc(100vh - 50px);
+      margin-top: 50px;
     }
   }
 
@@ -91,6 +92,7 @@ export const PageContainer = styled.div`
 
     border-bottom: 2px solid rgba(0, 162, 162, 1);
     border-top: 2px solid transparent;
+    background-color: rgba(0, 162, 162, 0.05);
 
     .MuiListItemIcon-root {
       min-width: 35px;

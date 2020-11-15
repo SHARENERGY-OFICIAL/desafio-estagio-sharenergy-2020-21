@@ -20,7 +20,7 @@ import Alert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import Drawer from "@material-ui/core/Drawer";
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 
 import { useHistory, useLocation } from "react-router-dom";
 
@@ -171,8 +171,9 @@ const Clientes: React.FC = () => {
       </AppBar>
       <Paper elevation={5} className="Container">
         {openSideMenu ? (
-          <Drawer
+          <SwipeableDrawer
             anchor="left"
+            onOpen={() => setOpenSideMenu(true)}
             open={openSideMenu}
             onClose={handleCloseSideMenu}
             PaperProps={{
@@ -182,6 +183,13 @@ const Clientes: React.FC = () => {
                 color: "#eee",
                 overflowX: "hidden",
                 overflowY: "auto",
+                marginTop: 56,
+                paddingTop: 5,
+              },
+            }}
+            ModalProps={{
+              style: {
+                zIndex: 1099,
               },
             }}
           >
@@ -189,12 +197,27 @@ const Clientes: React.FC = () => {
               {clientsData.map((data) => (
                 <div key={data.numeroCliente}>
                   <ListItem
-                    onClick={() => handleSelection(data)}
-                    className={
+                    style={
                       selectedClient === data.numeroCliente
-                        ? "ClientItemSelected"
-                        : "ClientItem"
+                        ? {
+                            borderBottomWidth: 2,
+                            borderBottomColor: "rgba(0, 162, 162, 1)",
+                            borderBottomStyle: "solid",
+                            borderTopWidth: 2,
+                            borderTopColor: "transparent",
+                            borderTopStyle: "solid",
+                            backgroundColor: "rgba(0, 162, 162, 0.05)",
+                          }
+                        : {
+                            borderBottomWidth: 2,
+                            borderBottomColor: "transparent",
+                            borderBottomStyle: "solid",
+                            borderTopWidth: 2,
+                            borderTopColor: "transparent",
+                            borderTopStyle: "solid",
+                          }
                     }
+                    onClick={() => handleSelection(data)}
                     button
                   >
                     <ListItemIcon>
@@ -206,7 +229,7 @@ const Clientes: React.FC = () => {
                 </div>
               ))}
             </Box>
-          </Drawer>
+          </SwipeableDrawer>
         ) : (
           <Box className="SideBar">
             {clientsData.map((data) => (

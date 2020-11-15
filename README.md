@@ -10,7 +10,7 @@
 </h2>
 
 ![Dashboard](https://user-images.githubusercontent.com/55251721/99190727-0f6e9a00-2747-11eb-9547-670e029c9fd7.png)
-![Clients](https://user-images.githubusercontent.com/55251721/99190729-10073080-2747-11eb-82be-eb4252c2f669.png)
+![Clients](https://user-images.githubusercontent.com/55251721/99194400-e574a200-275d-11eb-8d22-03ac372ed491.png)
    
    #### Dependências da Aplicação Web
   - ReactJS
