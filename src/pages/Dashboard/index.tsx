@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "@material-ui/core/Container";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -22,7 +22,21 @@ import { PageContainer, ButtonText } from "./styles";
 
 const Dashboard: React.FC = () => {
   const [selectedInterest, setSelectedInterest] = useState("tensao_V");
+  const [producedEnergyPrice, setProducedEnergyPrice] = useState<number>(0);
+
   const history = useHistory();
+
+  useEffect(() => {
+    const timeInterval = dadosUsina[1].tempo_h - dadosUsina[0].tempo_h;
+    var kWTotal = 0;
+    dadosUsina.forEach((dado) => {
+      kWTotal += dado.potencia_kW;
+    });
+
+    const totalEnergy = timeInterval * kWTotal;
+
+    setProducedEnergyPrice(totalEnergy * 0.95);
+  }, []);
 
   return (
     <PageContainer>
@@ -35,7 +49,7 @@ const Dashboard: React.FC = () => {
           />
           <Tooltip title="Ir para Clientes" aria-label="ir para clientes">
             <Button
-              onClick={() => history.push("clientes")}
+              onClick={() => history.push("clientes", producedEnergyPrice)}
               color="inherit"
               aria-label="clientes"
             >

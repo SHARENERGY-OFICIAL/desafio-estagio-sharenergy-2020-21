@@ -31,6 +31,7 @@ export const PageContainer = styled.div`
   .SideBar {
     overflow-y: auto;
     overflow-x: hidden;
+    max-width: 250px;
     ::-webkit-scrollbar {
       width: 5px;
     }

@@ -18,7 +18,7 @@ import Card from "@material-ui/core/Card";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Alert from "@material-ui/lab/Alert";
 
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 import { PageContainer, ButtonText } from "./styles";
 
@@ -28,6 +28,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 
 const Clientes: React.FC = () => {
   const history = useHistory();
+  const { state: producedEnergyPrice } = useLocation<number>();
 
   const [clientsData, setClientsData] = useState<IDadoCliente[]>(dadosClientes);
   const [selectedClient, setSelectedClient] = useState<number>();
@@ -252,6 +253,15 @@ const Clientes: React.FC = () => {
                         </Box>
                       </Box>
                     </Box>
+                    <p className="Profit">
+                      R$
+                      {Number(
+                        (
+                          (data.percentualUsina / 100) *
+                          producedEnergyPrice
+                        ).toFixed(2)
+                      ).toLocaleString("pt-BR")}
+                    </p>
                   </Card>
                 </GridListTile>
               ))}
