@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev --inspect --transpile-only --ignore node_modules src/server.ts",
-    "populate": "ts-node src/database/populate.ts",
+    "populate": "ts-node src/database/populate.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
