@@ -291,7 +291,6 @@ export const PageContainer = styled.div`
     font-weight: bold;
     font-size: 18px;
     text-align: center;
-    background-color: transparent;
     border: 0;
     border-bottom: solid 2px transparent;
     border-top: solid 2px transparent;
