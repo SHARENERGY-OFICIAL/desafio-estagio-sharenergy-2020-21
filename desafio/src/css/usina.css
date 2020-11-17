@@ -1,0 +1,72 @@
+link {
+  text-decoration: none;
+}
+body {
+  background-image: url("../imagens/fundo_home.jpg");
+  color: #ffff;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+}
+.container {
+  margin: 1cm;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  overflow: hidden;
+  position: relative;
+}
+.header {
+  margin: 0 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+  margin-top: 0.2rem;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+h1 a{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+  margin-top: 0.2rem;
+  letter-spacing: 0.01em;
+  text-align: right;
+  text-decoration: none;
+}
+.footer {
+  background: rgba(255, 255, 255, 0.15);
+  min-height: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.055rem;
+  line-height: 1.2rem;
+  padding: 0.4rem 0;
+  border-radius: 8px;
+}
+.footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0.38;
+}
+a:hover {
+  opacity: .6;
+  transition-duration: 1.5s;
+}
+.link{
+  border-bottom: 2px solid #000;
+  padding:20px;
+  font-size: 12pt;
+  transition: all .2s linear;
+}
+.link:hover{
+  background-color: rgb(160, 160, 160);
+}
+
+
