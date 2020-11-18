@@ -2,8 +2,7 @@
     {
         "numeroCliente": 1,
         "nomeCliente": "Ana Silva",
-        "usinas":
-        [
+        "usinas": [
             {
                 "numeroUsina": 1,
                 "percentualUsina": 30
@@ -13,8 +12,7 @@
     {
         "numeroCliente": 2,
         "nomeCliente": "João Santos",
-        "usinas":
-        [
+        "usinas": [
             {
                 "numeroUsina": 1,
                 "percentualUsina": 20
@@ -24,11 +22,14 @@
     {
         "numeroCliente": 3,
         "nomeCliente": "Maria Coelho",
-        "usinas":
-        [
+        "usinas": [
             {
                 "numeroUsina": 1,
                 "percentualUsina": 50
+            },
+            {
+                "numeroUsina": 2,
+                "percentualUsina": 10
             }
         ]
     }
