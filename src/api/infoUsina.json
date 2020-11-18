@@ -1,0 +1,30 @@
+[
+    {
+        "nome": "Usina 1",
+        "latitude": -19.9774226,
+        "longitude": -43.9394392,
+        "owner": "Gabriel Martins",
+        "numeroUsina": 1
+    },
+    {
+        "nome": "Usina 2",
+        "latitude": -19.9217297,
+        "longitude": -43.9232676,
+        "owner": "Gabriel Martins",
+        "numeroUsina": 2
+    },
+    {
+        "nome": "Usina 3",
+        "latitude": -19.9777817,
+        "longitude": -43.9604047,
+        "owner": "Gabriel Martins",
+        "numeroUsina": 3
+    }, 
+    {
+        "nome": "Usina 4",
+        "latitude": -19.865867,
+        "longitude": -43.9733202,
+        "owner": "Gabriel Martins",
+        "numeroUsina": 4
+    }
+]
