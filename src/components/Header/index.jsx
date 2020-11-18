@@ -9,6 +9,7 @@ import { HeaderContainer, HeaderContent, Icon } from './Header'
 import BrandLogo from '../../assets/Brand logo.png'
 import Selfie from '../../assets/self.png'
 import MapIcon from '../../assets/map.svg'
+import SettingsIcon from '../../assets/settings.svg'
 
 const Header = () => {
 
@@ -25,10 +26,15 @@ const Header = () => {
         <HeaderContainer >
             <HeaderContent >
                 <Link to="/">
-                    <img src={BrandLogo}/>
+                    <img src={BrandLogo} alt=""/>
                 </Link>
                 <div>
-                    { state.openDashboard ? <Icon src={MapIcon} onClick={() => { closeDashboard()} } /> : ''}
+                    { 
+                        state.openDashboard ? <Icon src={MapIcon} onClick={() => { closeDashboard()} } /> : 
+                        <Link to="settings">
+                            <Icon src={SettingsIcon} />
+                        </Link>
+                    }
                     <img src={Selfie} alt=""/>
                 </div>
             </HeaderContent>
