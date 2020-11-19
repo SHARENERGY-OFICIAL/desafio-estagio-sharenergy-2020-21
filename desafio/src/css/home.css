@@ -24,7 +24,7 @@ body {
 h1 {
   text-transform: uppercase;
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, .6);
   line-height: 1;
   margin-top: 0.2rem;
   letter-spacing: 0.01em;
@@ -33,7 +33,7 @@ h1 {
 h1 a{
   text-transform: uppercase;
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
   line-height: 1;
   margin-top: 0.2rem;
   letter-spacing: 0.01em;
@@ -42,18 +42,18 @@ h1 a{
 }
 .footer {
   background: rgba(255, 255, 255, 0.15);
-  min-height: 2rem;
+  min-height: 1rem;
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.055rem;
-  line-height: 1.2rem;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.2rem;
+  line-height: 1.4rem;
   padding: 0.4rem 0;
   border-radius: 8px;
 }
 .footer a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
-  opacity: 0.38;
+  color: rgba(255, 255, 255, 1);
+  opacity: 0.5;
 }
 a:hover {
   opacity: .6;
@@ -77,10 +77,10 @@ label#icone:hover{
   position: absolute;
   top: 4px;
   background: rgba(120,120,120,0.9);
-  height: 10.5%;
-  width: 330px;
+  height: 10.4%;
+  width: 326px;
   transition: all .2s linear;
-  border-radius: 12px; 
+  border-radius: 6px; 
   right: -300px;
 }
 #check:checked ~ .barra{
@@ -104,7 +104,7 @@ ul.menu{
  float:left;
  width:auto;
  position:relative;
- border: 1pt solid black;
+ border-left: 1pt solid black;
 }
 .menu li a{
   display:block;

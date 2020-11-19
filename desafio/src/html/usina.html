@@ -7,6 +7,7 @@
 
     <link rel="icon" href="../imagens/logo.png" />
     <link rel="stylesheet" href="../css/usina.css" />
+    <script src="../javascript/usina.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
@@ -27,15 +28,31 @@
             />
           </a>
         </h1>
+        <input type="checkbox" id="check">
+        <label for="check" id="icone" ><img src="../imagens/menu.png"></label>
+        <div class="barra">
+          <ul class="menu">
+            <li><a href="https://sharenergy.com.br/sobre-nos/" target="_blank">Quem somos</a></li>         
+            <li><a href="https://blog.bluesol.com.br/energia-solar-fotovoltaica-guia-supremo/" target="_blank">Energia fotovoltaica</a></li>
+        </div>
+          <form>
+            <p>Escolha um item</p>
+            <input id="tensao" type="radio" onclick="mudarGrafico();" name="escolha" value="ten" >Tensão
+            <input id="corrente" type="radio" onclick="mudarGrafico();" name="escolha" value="cor">Corrente
+            <input id="potencia" type="radio" onclick="mudarGrafico();" name="escolha" value="pot">Potência
+            <input id="temperatura" type="radio" onclick="mudarGrafico();" name="escolha" value="cor">Temperatura
+            </form>
+            <p>Em função do tempo por horas</p> 
+          <div id="grafico">
+          </div>
       </div>
     </div>
     <footer class="footer">
       Desenvolvido por
       <a href="https://github.com/eukaique" target="_blank"
-        >Kaique Oliveira Santos</a
+        >Kaique Oliveira Santos <img id="img_github" src="../imagens/github_img.png" height="18px" width="24px"></a
       >
       | Share Energy 2020 &copy;
-      <span class="plant">🍃</span>
     </footer>
   </body>
 </html>
