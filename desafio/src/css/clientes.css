@@ -40,6 +40,248 @@ h1 a{
   text-align: right;
   text-decoration: none;
 }
+input#entrar{
+  display: none;
+}
+img#login{
+  margin-right: 0.2cm;
+}
+label#entrar{
+  font-size: 1.3rem;
+}
+label#entrar:hover{
+  color: deepskyblue;
+  cursor: pointer;
+}
+label#separador{
+  margin-left: 0.3cm;
+  margin-right: 0.2cm;
+}
+input#cadastrar{
+  display: none;
+}
+label#cadastrar{
+  font-size: 1.3rem;
+}
+label#cadastrar:hover{
+  color: deepskyblue;
+  cursor: pointer;
+}
+img#registrar{
+  margin-left: 0.2cm;
+}
+input#check{
+  display: none;
+}
+label#icone{
+  top: 10px;
+  left: 1100px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+label#icone:hover{
+  opacity: 0.8;
+}
+.barra{
+  display: none;
+  position: absolute;
+  top: 4px;
+  background: rgba(120,120,120,0.9);
+  height: 5.2%;
+  width: 326px;
+  transition: all .2s linear;
+  border-radius: 6px; 
+  right: -300px;
+}
+#check:checked ~ .barra{
+  display: flex;
+  transform:translateX(-120%);
+}
+ul.menu, .menu li, .menu a{ 
+  margin:0;
+  padding:0; 
+  list-style:none;
+  text-decoration:none;
+}
+ul.menu ul{ 
+  position: absolute;
+}
+ul.menu{ 
+  font-size:15px;
+  border-radius:5px;
+}
+.menu li{
+ float:left;
+ width:auto;
+ position:relative;
+ border-left: 1pt solid black;
+}
+.menu li a{
+  display:block;
+  padding:0 20px;
+  line-height:45px;
+  height:45px;
+  float:right;
+  transition:all 0.1s linear;
+}
+.menu{
+  background:rgba(120,120,120,0.5);
+}
+.menu a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.0rem;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.menu li:hover > a{
+  background:#999;
+  color:#fff;
+  text-decoration: none;
+}
+#validar_login{
+  margin-top: 1%;
+  margin-left: 26%;
+  height: 380px;
+  width: 560px;
+  background-color: rgba(120,120,120,0.5);
+  border-radius: 10px;
+}
+.form_login{
+  width: 100%;
+}
+.id_cliente{
+  margin-bottom: 16px;
+}
+p{
+  font-size: 1.3rem;
+}
+.input_clienteId{
+  margin-top: 0.1cm;
+  line-height: 1.2;
+  font-size: 18px;
+  width: 60%;
+  background: solid;
+  height: 42px;
+  padding: 0 20px 0 38px;
+  border-radius: 8px;
+}
+input {
+  outline: none;
+  border: none;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  overflow: visible;
+}
+.focus-input_clienteId {
+  position: absolute;
+  display: block;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  pointer-events: none;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: scaleX(1.1) scaleY(1.3);
+  -moz-transform: scaleX(1.1) scaleY(1.3);
+  -ms-transform: scaleX(1.1) scaleY(1.3);
+  -o-transform: scaleX(1.1) scaleY(1.3);
+  transform: scaleX(1.1) scaleY(1.3);
+}
+.senha{
+  margin-bottom: 16px;
+}
+.input_senha{
+  margin-top: 0.8cm;
+  line-height: 1.2;
+  font-size: 18px;
+  width: 60%;
+  background: solid;
+  height: 42px;
+  padding: 0 20px 0 38px;
+  border-radius: 8px;
+}
+.focus-input_senha{
+  position: absolute;
+  display: block;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  pointer-events: none;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: scaleX(1.1) scaleY(1.3);
+  -moz-transform: scaleX(1.1) scaleY(1.3);
+  -ms-transform: scaleX(1.1) scaleY(1.3);
+  -o-transform: scaleX(1.1) scaleY(1.3);
+  transform: scaleX(1.1) scaleY(1.3);
+}
+.botao_login{
+  margin-top: 17px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn_login {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/abel/v12/MwQ5bhbm2POE2V9BPQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-size: 20px;
+  color: white;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-top: 1cm;
+  margin-left: 4.4cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 40%;
+  height: 62px;
+  background-color: deepskyblue;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+.btn_login:hover{
+  background-color: springgreen;
+}
+#validar_cadastro{
+  margin-bottom: 1%;
+  margin-left: 12%;
+  height: 380px;
+  width: 900px;
+  background-color: rgba(120,120,120,0.5);
+  border-radius: 10px;
+}
+#p_cadastro{
+  margin-left: 0.5cm;
+  text-align: left;
+}
+#validar_cadastro .input_clienteId{
+  margin-top: 0.5cm;
+}
 .footer {
   background: rgba(255, 255, 255, 0.15);
   min-height: 1rem;

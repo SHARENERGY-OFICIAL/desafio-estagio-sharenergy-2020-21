@@ -22,6 +22,60 @@
           <img src="../imagens/logo.png" width="25" height="25" alt="" />
         </a>
         </h1>
+        <input type="checkbox" name="login" id="entrar"><img src="../imagens/log-in.png" id="login"><label for="entrar" id="entrar">Conecte-se</label><label id="separador">|</label>
+        <input type="checkbox" name="login" id="cadastrar"><label for="cadastrar" id="cadastrar">Cadastre-se</label><img src="../imagens/add.png" id="registrar">
+        <input type="checkbox" id="check">
+        <label for="check" id="icone" ><img src="../imagens/menu.png"></label>
+        <div class="barra">
+          <ul class="menu">
+            <li><a href="https://sharenergy.com.br/sobre-nos/" target="_blank">Quem somos</a></li>         
+            <li><a href="https://blog.bluesol.com.br/energia-solar-fotovoltaica-guia-supremo/" target="_blank">Energia fotovoltaica</a></li>
+        </div>
+        <div id="validar_login">
+          <form class="form_login">
+        
+            <div class="id_cliente" data-validate="Coloque o seu ID">
+              <p>Informe seu id:</p>
+              <input class="input_clienteId" type="text" name="idCliente" placeholder=" exemplo: 5fac3f03cce3a4211cac....">
+              <span class="focus-input_clienteId"></span>
+            </div>
+            
+            <div class="senha" data-validate="Coloque a senha">
+              <input class="input_senha" type="password" name="ClienteSenha" placeholder="Senha">
+              <span class="focus-input_senha"></span>
+            </div>
+
+            <div class="botao_login">
+              <button class="btn_login">
+                Conecte-se
+              </button>
+            </div>
+  
+          </form>
+        </div>
+        <div id="validar_cadastro">
+          <form class="form_login">
+        
+            <div class="id_cliente" data-validate="Coloque o seu ID">
+              <p id="p_cadastro">Informe um id:
+              <input class="input_clienteId" type="text" name="idCliente" placeholder=" exemplo: 5fac3f03cce3a4211cac....">
+              <span class="focus-input_clienteId"></span>
+              </p>
+            </div>
+            
+            <div class="senha" data-validate="Coloque a senha">
+              <input class="input_senha" type="password" name="ClienteSenha" placeholder="Senha">
+              <span class="focus-input_senha"></span>
+            </div>
+
+            <div class="botao_login">
+              <button class="btn_login">
+                Conecte-se
+              </button>
+            </div>
+  
+          </form>
+        </div>
       </div>
     </div>
     <footer class="footer">
