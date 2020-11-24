@@ -1,0 +1,64 @@
+{
+  "client": [
+    {
+      "image": "https://www.solarix.eco.br/wp-content/uploads/2018/06/energia-solar_00013-1-thegem-post-thumb-large.jpg",
+      "name": "maria ",
+      "percentualUsina": "50",
+      "address": "Rua Francisco Viléla 000 Qd 00 ",
+      "telephone": "(62) 9 0000-0000",
+      "numeroUsina": "1",
+      "available": true,
+      "id": 1
+    },
+    {
+      "image": "https://image.freepik.com/fotos-gratis/vista-aerea-de-uma-casa-particular-com-paineis-solares-no-telhado_181624-14677.jpg",
+      "name": "maria jose",
+      "percentualUsina": "2",
+      "address": "Rua Francisco Viléla 000 Qd 00 ",
+      "telephone": "(62) 9 9999-0000",
+      "numeroUsina": "1",
+      "available": true,
+      "id": 2
+    },
+    {
+      "image": "https://image.freepik.com/fotos-gratis/paineis-solares-em-vista-aerea_93200-1618.jpg",
+      "name": "ana",
+      "address": "rua 12 lt20",
+      "telephone": "(00) 0 0000-0000",
+      "numeroUsina": "12",
+      "percentualUsina": "15",
+      "available": true,
+      "id": 3
+    }
+  ],
+  "hours": [
+    {
+      "tempo_h": 6,
+      "tensao_V": 550.9,
+      "corrente_A": 0,
+      "potencia_kW": 5,
+      "temperatura_C": 26.2
+    },
+    {
+      "tempo_h": 11,
+      "tensao_V": 550.9,
+      "corrente_A": 0,
+      "potencia_kW": 20,
+      "temperatura_C": 26.2
+    },
+    {
+      "tempo_h": 16,
+      "tensao_V": 550.9,
+      "corrente_A": 0,
+      "potencia_kW": 15,
+      "temperatura_C": 26.2
+    },
+    {
+      "tempo_h": 21,
+      "tensao_V": 550.9,
+      "corrente_A": 0,
+      "potencia_kW": 0,
+      "temperatura_C": 26.2
+    }
+  ]
+}
