@@ -1,0 +1,50 @@
+<%- include('partials/head.ejs') %>   
+</head>
+<body>
+    <%- include('partials/dashboard.ejs') %>
+    
+    <div class="user-details">
+        <div class="user-info">
+            <div>
+                <p>Nome: <%= user.nomeCliente %> </p>
+                <p>E-mail: <%= user.emailCliente %> </p>
+                <p>CPF: <%= user.cpfCliente %></p>
+                <p>Telefone: <%= user.telefoneCliente %> </p>
+            </div>
+
+            <div class="ml-auto">
+                <a href="/edit-user/<%=user._id%>"><i class="fas fa-edit"></i></a>
+                <form class="m-0 p-0 d-inline" action="/delete-user" method="POST">
+                <input type="hidden" value="<%=user._id%>" name="id">
+                <button class="border-0 bg-transparent delete-btn"><i class="fas fa-trash-alt"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <%if(user.usinas) {%> 
+            <div class="user-plants">        
+    
+                <ul class="plants-list">
+                <h3>Usinas:</h3>
+                    <%for(usina of user.usinas) {%> 
+                    <li class="plants-list-item">
+                        <div>
+                            <p>#<%= usina.numeroUsina %></p>
+                            <p>Porcentagem: <%= usina.percentualUsina %>% </p>
+                            <p>Receita: </p>
+                            <h3> R$ <%= ((usina.percentualUsina / 100) * receitaTotal).toFixed(2).replace('.', ',')  %></h3>
+                        </div>
+                    </li>
+                    <% } %> 
+                </ul>                
+                
+            <% } %>
+            
+            </div>
+        
+    </div>
+    <%- include('partials/footer.ejs') %>
+
+</body>
+</html>
+

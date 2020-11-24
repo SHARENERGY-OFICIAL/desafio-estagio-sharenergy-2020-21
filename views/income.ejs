@@ -1,0 +1,43 @@
+<%- include('partials/head.ejs') %>   
+</head>
+<body>
+    <%- include('partials/dashboard.ejs') %>
+    
+      <div class="col-7 mt-5 ml-auto mr-auto p-0">
+          <table class="table text-center">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Percentual Usina</th>
+                  <th scope="col">Retorno:</th>
+                </tr>
+              </thead>
+              <tbody>
+              <% for(user of users){ %> 
+                <tr>
+                  <th scope="row"><%= user.numeroCliente %> </th>
+                  <td><%= user.nomeCliente %> </td>
+                  <td>
+                      <% if(user.usinas){ %>
+                        <%for(usina of user.usinas) {%> 
+                      <%= usina.percentualUsina %>
+                    </td>
+                  <% let retorno = (usina.percentualUsina / 100) * receitaTotal %>
+                  <td>
+                      R$<%= retorno.toFixed(2) %> 
+                  </td>
+                  <% } %>
+                  <% } %>  
+                  
+                </tr>
+              <% } %> 
+              </tbody>
+            </table>
+            <div class="add-user d-flex justify-content-around">
+              <i class="fas fa-user-plus"></i><a href="/new-user">adicionar usuário</a>
+            </div>
+      </div> 
+      <%- include('partials/footer.ejs') %>
+</body>
+</html>

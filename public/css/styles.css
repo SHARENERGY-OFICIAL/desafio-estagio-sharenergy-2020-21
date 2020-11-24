@@ -1,0 +1,262 @@
+/* geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: 'Poppins';
+}
+
+i {
+    color: rgb(52,58,64);
+    font-size: 20px;
+    padding-top: 5px;
+    margin-right: 1rem;
+
+}
+
+td i {
+    margin-left: 1rem;
+}
+
+.btn {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(26, 161, 160);
+}
+
+/* dashboard */
+#wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#main-dashboard {
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    background-color:rgb(52,58,64);
+    margin-right: 20px;
+    font-size: 1.2rem;
+}
+
+.logo  {
+    width: 100%;
+    padding: 10px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav {
+    margin-top: 2rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+
+}
+
+.nav-link i {
+    color: rgba(213, 222, 38);
+    width: 2rem;
+}
+
+.nav-link.active {
+    color: rgb(26, 161, 160);
+}
+
+.nav-link:hover {
+    color: rgba(26, 161, 160, 0.5);
+}
+
+/* form */
+
+.form-wrapper{
+    display: flex;
+    width: 500px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.form {
+    border: 2px solid rgb(26, 161, 160);
+    color: white;
+    padding: 2rem;
+    background-color: rgb(52,58,64);
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.error-message {
+    width: 500px;
+    margin: auto;
+    margin-top:2rem;
+    border: 2px solid red;
+    border-radius: .25rem;
+    background-color: rgb(240, 93, 93);
+    height: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+/* index */
+
+.corpo {
+    position: relative;
+    margin-left:250px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.chart-wrapper{
+    padding: 2rem;
+    background-color: rgb(52,58,64);
+    border-radius: 20px;
+    width: 900px;
+    margin: auto;
+    margin-top: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+    height: fit-content;
+}
+
+.chart-data {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    color:  rgba(255, 255, 255, 0.9);
+}
+
+.chart-data h3{
+    font-size: 2rem;
+}
+
+.chart-data p{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.chart {
+    width: 100%;
+    
+}
+
+.dropdown {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.dropdown .btn {
+    width: 200px;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.dropdown .btn:hover {
+    color:rgba(255, 255, 255, 0.6);
+}
+
+.dropdown-item:hover{
+    cursor: pointer;
+}
+
+/* users */
+
+.users {
+    border: 2px solid rgb(52,58,64);
+    border-radius: 0 0 20px 20px;
+    margin: auto;
+    width: 700px;
+    margin-top: 2rem;
+}
+
+.add-user {
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 225px;
+    height: 40px;
+    margin-left: auto;
+}
+
+.add-user a {
+    font-size: 18px;
+    color: black;
+}
+
+.add-user a:hover {
+    text-decoration: none;
+}
+
+.delete-btn:focus {
+    outline: none;
+}
+
+/* user details */
+
+.user-details {
+    border: 2px solid rgb(52,58,64);
+    border-radius: 20px;
+    width: 800px;
+    height: fit-content;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.user-info {
+    display: flex;
+    margin: 1rem;
+}
+
+.user-plants {
+    background-color: #343a40;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+}
+
+.plants-list {
+    list-style: none;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom:0;
+    
+}
+
+.plants-list-item {
+    border-top: 1px solid white;
+    display: flex;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.actions i {
+    color: rgba(255, 255, 255, 0.9);;
+}
