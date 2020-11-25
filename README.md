@@ -23,3 +23,4 @@
 4. Execute o comando "npm start" para iniciar a aplicação.
 
 ## LINK PARA O VIDEO
+https://www.youtube.com/watch?v=n2xL1U9oCAk&feature=youtu.be
