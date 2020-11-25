@@ -1,0 +1,46 @@
+<%- include('partials/head.ejs') %>   
+</head>
+<body>
+    <%- include('partials/dashboard.ejs') %>
+    
+    <div class="form-wrapper">
+      <% if(errorMessage){ %> 
+        <div class="error-message"><%= errorMessage %> </div>
+      <% } %> 
+      <div class="form">
+        <form action="/edit-user" method="POST">
+          <div class="form-group">
+              <label for="numeroCliente">Numero do Cliente</label>
+              <input type="number" class="form-control <%= validationErrors.find(error=> error.param === 'numeroCliente') ? 'invalid' : '' %>" name="numeroCliente" value="<%= user.numeroCliente %>">
+            </div>
+          <div class="form-group">
+            <label for="nomeCliente">Nome</label>
+            <input type="text" class="form-control <%= validationErrors.find(error=> error.param === 'nomeCliente') ? 'invalid' : '' %>" name="nomeCliente" value="<%= user.nomeCliente %>">
+          </div>
+          <div class="form-group">
+            <label for="emailCliente">E-mail</label>
+            <input type="email" class="form-control <%= validationErrors.find(error=> error.param === 'emailCliente') ? 'invalid' : '' %>" name="emailCliente" value="<%= user.emailCliente %>">
+          </div>
+          <div class="form-group">
+            <label for="cpfCliente">CPF</label>
+            <input type="number" class="form-control <%= validationErrors.find(error=> error.param === 'cpfCliente') ? 'invalid' : '' %>" name="cpfCliente" maxlength="11" value="<%= user.cpfCliente %>">
+          </div>
+          <div class="form-group">
+            <label for="telefoneCliente">Telefone</label>
+            <input type="number" class="form-control <%= validationErrors.find(error=> error.param === 'telefoneCliente') ? 'invalid' : '' %>" name="telefoneCliente" maxlength="11" value="<%= user.telefoneCliente %>">
+          </div>
+          <input type="hidden" value="<%=user._id%>" name="id"> 
+
+          
+          <button type="submit" class="btn">Editar</button>
+        </form>
+      </div>
+
+    </div>
+
+
+    <%- include('partials/footer.ejs') %>
+
+</body>
+</html>
+

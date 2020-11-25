@@ -1,0 +1,38 @@
+<%- include('partials/head.ejs') %>   
+</head>
+<body>
+    <%- include('partials/dashboard.ejs') %>
+    
+      <div class="users">
+          <table class="table text-center">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+              <% for(user of users){ %> 
+                <tr>
+                  <th scope="row"><%= user.numeroCliente %> </th>
+                  <td><%= user.nomeCliente %> </td>
+                  <td>
+                      <a href="/user/<%=user._id%>"><i class="far fa-eye"></i></a>
+                      <a href="/edit-user/<%=user._id%>"><i class="fas fa-edit"></i></a>
+                      <form class="m-0 p-0 d-inline" action="/delete-user" method="POST">
+                      <input type="hidden" value="<%=user._id%>" name="id">
+                      <button class="border-0 bg-transparent delete-btn"><i class="fas fa-trash-alt"></i></button>
+                      </form>
+                  </td>
+                </tr>
+              <% } %> 
+              </tbody>
+            </table>
+            <div class="add-user d-flex justify-content-around mr-auto">
+              <i class="fas fa-user-plus"></i><a href="/new-user">adicionar usuário</a>
+            </div>
+      </div> 
+      <%- include('partials/footer.ejs') %>
+</body>
+</html>

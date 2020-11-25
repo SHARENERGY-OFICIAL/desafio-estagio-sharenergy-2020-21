@@ -1,0 +1,53 @@
+<%- include('partials/head.ejs') %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>   
+</head>
+<body>
+    
+    <%- include('partials/dashboard.ejs') %>
+    <div class="chart-wrapper">
+        <div class="chart">
+            <canvas id="myChart"></canvas>
+        </div> 
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Variável:
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li class="dropdown-item" onclick="selecionaVariavel(this)">Tensão (v)</li>
+              <li class="dropdown-item" onclick="selecionaVariavel(this)">Corrente (A)</li>
+              <li class="dropdown-item" onclick="selecionaVariavel(this)">Potência (kW)</li>
+              <li class="dropdown-item" onclick="selecionaVariavel(this)">Temperatura (ºC)</li>
+            </div>
+        </div>
+        <div class="chart-data">
+            <p>Receita total:</p>
+            <h3>R$<%=receitaTotal.replace('.', ',')  %></h3>
+            <p>Potência total:</p>
+            <h3><%=potenciaTotal.replace('.', ',') %> kW</h3>
+        </div>
+    </div>
+    
+    <script>
+        //transformando arrays
+        var arrayTempo = <%- JSON.stringify(tempo) %>;
+        var arrayTensao= <%- JSON.stringify(tensao) %>;
+        var arrayCorrente = <%- JSON.stringify(corrente) %>;
+        var arrayPotencia = <%- JSON.stringify(potencia) %>;
+        var arrayTemperatura = <%- JSON.stringify(temperatura) %>;
+        
+        let selecionado = arrayCorrente;
+        let label = 'Corrente (A)';
+        converteHorario(arrayTempo);
+        renderChart(arrayTempo, selecionado, label);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
