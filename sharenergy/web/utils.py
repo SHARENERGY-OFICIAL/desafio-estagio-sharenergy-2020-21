@@ -24,9 +24,9 @@ def format_time_float(time: str):
 def format_var(variavel: str):
     grandezas = {
         'tempo_h': 'tempo',
-        'tensao_V': 'tensao',
+        'tensao_V': 'tensão',
         'corrente_A': 'corrente',
-        'potencia_kW': 'potencia',
+        'potencia_kW': 'potência',
         'temperatura_C': 'temperatura'
     }
     return grandezas[variavel]
@@ -48,6 +48,30 @@ def get_XY_from_dict(filename: str, variavel: str):
     horarios = []
     for usina in usinas:
         grandeza.append(usina[variavel])
-        horarios.append(format_time_float(usina['tempo_h']))
-        """ horarios.append(usina['tempo_h']) """
+        #horarios.append(format_time_float(usina['tempo_h']))
+        horarios.append(usina['tempo_h'])
     return grandeza, horarios
+
+def get_energia_gerada(filename: str):
+    """
+    retorna a energia gerada total da usina
+    """
+    usinas = get_dict_from_json(filename)
+    tempos = []
+    potencias = []
+    energia_gerada = []
+    for usina in usinas:
+        tempos.append(format_time_float(usina['tempo_h']))
+        potencias.append(usina['potencia_kW'])
+    for n in range(0, len(tempos)-1):
+        energia_gerada.append((tempos[n+1]-tempos[n]) * potencias[n])
+    return sum(energia_gerada)
+
+def get_rendimento(energia, porcentagem):
+    """
+    retorna o rendimento da usina em reais de acordo com a porcentagem de participação do cliente
+    """
+    custo = 0.95
+    receita = custo * energia
+    rendimento = (porcentagem * receita)/100
+    return round(rendimento, 2)

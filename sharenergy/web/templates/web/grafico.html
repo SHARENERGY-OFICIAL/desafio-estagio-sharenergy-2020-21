@@ -14,7 +14,7 @@
         <h3 class="text-muted py-3">Qual variavel deve ser utilizada ?</h3>
         <form action="{% url 'grafico' %}" method="GET">
             <div>
-                {% if variavel == "tensao" %}
+                {% if variavel == "tensão" %}
                     <input type="radio" value="tensao_V" checked name="variavel"> Tensão</input>
                 {% else %}
                     <input type="radio" value="tensao_V" name="variavel"> Tensão</input>
@@ -28,7 +28,7 @@
                 {% endif %}
             </div>
             <div>
-                {% if variavel == "potencia" %}
+                {% if variavel == "potência" %}
                     <input type="radio" value="potencia_kW" checked name="variavel"> Potencia</input>
                 {% else %}
                     <input type="radio" value="potencia_kW" name="variavel"> Potencia</input>
