@@ -1,6 +1,7 @@
 import json
 
 def format_time_str(time: str):
+    'formata o horario e devolve em string'
     time = str(round(float(time), 2))
     hora, minutos = time.split(".")
     minutos = str((int(minutos) * 60)/100)
@@ -11,10 +12,14 @@ def format_time_str(time: str):
     return f'{hora}:{minutos}'
 
 def format_time_float(time: str):
+    'converte os minutos de forma correta'
+
+    # aredonda o numero. str > float > str
     time = str(round(float(time), 2))
     hora, minutos = time.split(".")
-    minutos = str((int(minutos) * 60)/100)
-    return float('{hora}.{minutos}')
+    # converte os minutos para a forma correta. str > int > float > str
+    minutos = str(round((int(minutos) * 60)/100))
+    return float(f'{hora}.{minutos}')
 
 def format_var(variavel: str):
     grandezas = {
