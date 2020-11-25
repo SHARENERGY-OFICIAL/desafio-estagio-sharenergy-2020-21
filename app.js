@@ -13,6 +13,7 @@ app.set('view engine', 'ejs');
 
 const adminRoutes = require('./routes/adminRoutes');
 const errorController = require('./controllers/errorController');
+const errorHandler = require('./util/errorHandler');
 
 
 app.use(express.static('public'));

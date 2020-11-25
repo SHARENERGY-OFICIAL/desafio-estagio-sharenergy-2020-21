@@ -13,17 +13,14 @@ const userSchema = new Schema({
         required: true
     },
     emailCliente: {
-        type: String,
-        required: true
+        type: String
     },
     cpfCliente: {
         type: Number,
-        unique: true,
-        required: true
+        unique: false
     },
     telefoneCliente: {
-        type: Number,
-        required: true
+        type: Number
     },
     usinas:
         [

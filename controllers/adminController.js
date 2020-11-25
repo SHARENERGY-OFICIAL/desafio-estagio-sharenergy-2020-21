@@ -56,12 +56,15 @@ exports.getEditUser = async (req, res, next) => {
 exports.postEditUser = async (req, res, next) => {
     const id = req.body.id;
     const errors = validationResult(req);
+    const user = await User.findById(id);
+
     
     if(!errors.isEmpty()){
         console.log(errors.array());
-        return res.status(422).render('edit-user', {
+        return res.status(422).render('edit-user' , {
             path: '/edit-user',
             title: 'Editar Usuário',
+            user:user,
             errorMessage: errors.array()[0].msg,
             oldInput: {
                 numeroCliente: req.body.numeroCliente,
@@ -73,7 +76,6 @@ exports.postEditUser = async (req, res, next) => {
             validationErrors: errors.array()
         })
     }
-    const user = await User.findById(id);
     if(!user){
         return next(new Error('Nenhum usuário encontrado'));
     }
