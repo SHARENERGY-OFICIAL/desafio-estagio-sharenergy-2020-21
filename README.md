@@ -1,3 +1,17 @@
+# Como rodar a aplicação
+1. Instale o Python (https://www.python.org/downloads/), usei a versão 3.7
+1.   Instale os modulos django e matplotlib.
+1.   Usando no CMD do windows: 'pip install django==2.2' e 'pip install matplotlib'
+1.   Após clonar o repositorio, entre na pasta 'sharenergy' a partir da linha de comando e use o comando 'py manage.py runserver' para o rodar o servidor
+1.   A aplicação vai estar disponivel : http://127.0.0.1:8000/
+
+## Rotas da aplicação
+1. http://127.0.0.1:8000/web/  ``Exibe o grafico``
+1. http://127.0.0.1:8000/users/cliente/list ``Lista os clientes``
+1. http://127.0.0.1:8000/users/cliente/id  ``Exibe informações do cliente, como sua porcentagem em uma usina``
+
+
+
 # Desafio para processo seletivo de estágio SHARENERGY 2020/21
    Esse repositório se destina aos interessados em participar do processo seletivo para estagiários da SHARENERGY 2020/21. As vagas são voltadas para desenvolvimento de aplicação  Web.
 
