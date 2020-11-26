@@ -7,10 +7,10 @@
 
 ## Rotas da aplicação
 1. http://127.0.0.1:8000/web/  ``Exibe o grafico``
-1. http://127.0.0.1:8000/users/cliente/list ``Lista os clientes``
+1. http://127.0.0.1:8000/users/list ``Lista os clientes``
 1. http://127.0.0.1:8000/users/cliente/id  ``Exibe informações do cliente, como sua porcentagem em uma usina``
 
-
+Video explicado no youtube: https://youtu.be/S5k4oCT9tac
 
 # Desafio para processo seletivo de estágio SHARENERGY 2020/21
    Esse repositório se destina aos interessados em participar do processo seletivo para estagiários da SHARENERGY 2020/21. As vagas são voltadas para desenvolvimento de aplicação  Web.
