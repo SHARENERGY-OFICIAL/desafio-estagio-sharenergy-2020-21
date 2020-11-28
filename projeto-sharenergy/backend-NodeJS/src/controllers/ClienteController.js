@@ -33,4 +33,16 @@ module.exports = {
 
     return res.json(cliente);
   },
+  /**
+   * Atualizar dados do Cliente no BD
+   * @param {*} req
+   * @param {*} res
+   */
+  async atualizarDadosCliente(req, res) {
+    const cliente = await Cliente.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+
+    return res.json(cliente);
+  },
 };
