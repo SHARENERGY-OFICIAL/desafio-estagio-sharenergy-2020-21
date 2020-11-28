@@ -13,22 +13,10 @@ mongoose.connect(
 
 requireDir("./src/models");
 
-const Cliente = mongoose.model("Cliente");
-
-app.get("/", (req, res) => {
-  Cliente.create({
-    numeroCliente: 1,
-    nomeCliente: "Ana Silva",
-    usinas: [
-      {
-        numeroUsina: 1,
-        percentualUsina: 30,
-      },
-    ],
-  });
-
-  return res.send("Olá Sharenergy");
-});
+/**
+ * Rotas
+ */
+app.use('/app', require("./src/routes"));
 
 app.listen(3100, () => {
   console.log("Servidor rodando na porta 3100");
