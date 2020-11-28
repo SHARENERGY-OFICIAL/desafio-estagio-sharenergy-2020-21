@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const mongoosePaginate = require("mongoose-paginate");
 
 const ClienteSchema = new mongoose.Schema({
   numeroCliente: {
@@ -56,7 +57,8 @@ const ClienteSchema = new mongoose.Schema({
         require: false,
       },
     },
-  ]
+  ],
 });
 
+ClienteSchema.plugin(mongoosePaginate);
 mongoose.model("Cliente", ClienteSchema);

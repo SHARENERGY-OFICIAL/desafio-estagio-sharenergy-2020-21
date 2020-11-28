@@ -4,12 +4,13 @@ const Cliente = mongoose.model("Cliente");
 
 module.exports = {
   /**
-   * Listar todos os Clientes no BD
+   * Listar 10 Clientes por pagina, buscando no BD. Buscar por Pagina de Clientes
    * @param {*} req
    * @param {*} res
    */
   async listarTodosClientes(req, res) {
-    const clientes = await Cliente.find();
+    const { page = 1 } = req.query;
+    const clientes = await Cliente.paginate({}, { page: page, limit: 10 });
 
     return res.json(clientes);
   },
