@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const requireDir = require("require-dir");
 
 const app = express();
+app.use(express.json());
 
 // Iniciando o DB
 mongoose.connect(
@@ -16,7 +17,7 @@ requireDir("./src/models");
 /**
  * Rotas
  */
-app.use('/app', require("./src/routes"));
+app.use("/app", require("./src/routes"));
 
 app.listen(3100, () => {
   console.log("Servidor rodando na porta 3100");
