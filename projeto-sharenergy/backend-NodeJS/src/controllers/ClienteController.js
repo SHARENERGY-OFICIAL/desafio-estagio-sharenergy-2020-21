@@ -45,4 +45,14 @@ module.exports = {
 
     return res.json(cliente);
   },
+  /**
+   * Excluir Cliente do BD
+   * @param {*} req
+   * @param {*} res
+   */
+  async deletarCliente(req, res) {
+    await Cliente.findByIdAndRemove(req.params.id);
+
+    return res.send();
+  },
 };
