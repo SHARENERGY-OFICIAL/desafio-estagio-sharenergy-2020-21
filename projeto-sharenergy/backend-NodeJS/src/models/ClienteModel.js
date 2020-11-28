@@ -12,11 +12,11 @@ const ClienteSchema = new mongoose.Schema({
   usinas: [
     {
       numeroUsina: {
-        type: String,
+        type: Number,
         require: true,
       },
       percentualUsina: {
-        type: String,
+        type: Number,
         require: true,
       },
     },
