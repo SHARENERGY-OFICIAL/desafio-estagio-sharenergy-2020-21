@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const ClienteSchema = new mongoose.Schema({
   numeroCliente: {
-    type: int,
+    type: Number,
     require: true,
   },
   nomeCliente: {
