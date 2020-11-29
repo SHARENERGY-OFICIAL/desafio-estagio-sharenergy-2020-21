@@ -1,25 +1,12 @@
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const requireDir = require("require-dir");
+const app = require("./config/express")();
 
-const app = express();
-app.use(express.json());
+require("dotenv").config();
+require("./config/database");
+
+const cors = require("cors");
+
 app.use(cors());
 
-// Iniciando o DB
-mongoose.connect(
-  "mongodb+srv://adm:asdf-456@cluster0.ixajh.mongodb.net/sharenergy-project-db?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
-
-requireDir("./src/models");
-
-/**
- * Rotas
- */
-app.use("/app", require("./src/routes"));
-
-app.listen(3100, () => {
-  console.log("Servidor rodando na porta 3100");
+app.listen(app.get("port"), () => {
+  console.log(`Servidor rodando na porta ${app.get("port")}...`);
 });
