@@ -1,10 +1,12 @@
-const express = require('express');
-const app = express();
+const app = require("./config/express")();
 
-app.listen(3100, () =>{
-    console.log("Servidor rodando na porta 3100");
-});
+require("dotenv").config();
+require("./config/database");
 
-app.get('/', (req, res) => {
-    res.send("Olá Sharenergy");
+const cors = require("cors");
+
+app.use(cors());
+
+app.listen(app.get("port"), () => {
+  console.log(`Servidor rodando na porta ${app.get("port")}...`);
 });
