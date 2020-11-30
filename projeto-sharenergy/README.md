@@ -45,4 +45,6 @@ StyledComponents: Lib usada estilização dos componentes.
 Font Awesome: Lib de fontes de ícones.
 }
 
+## Link da apresentação: https://youtu.be/a7HAJwxoQnA
+
 ###Muito Obrigado!!!Fim!!!
