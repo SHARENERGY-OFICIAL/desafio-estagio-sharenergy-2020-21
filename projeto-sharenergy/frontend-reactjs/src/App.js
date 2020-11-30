@@ -1,13 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+import Routes from "./routes";
+import "./styles/global";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Olá Sharenergy</h1>
-      </div>
-    );
-  }
-}
+import Header from "./components/Header";
+
+const App = () => (
+  <div className="App">
+    <Header />
+    <Routes />
+  </div>
+);
 
 export default App;
